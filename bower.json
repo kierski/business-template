@@ -1,0 +1,14 @@
+{
+  "name": "pb",
+  "description": "business theme",
+  "main": "index.js",
+  "authors": [
+    "Andrzej <kierski.andrzej@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "kier.ski",
+  "dependencies": {
+    "owl.carousel": "^2.2.0",
+    "bootstrap": "v4.0.0-alpha.5"
+  }
+}

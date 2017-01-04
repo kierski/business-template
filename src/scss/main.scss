@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/* bootstrap */
+@import "bootstrap/scss/bootstrap.scss";
+
+/* base */
+@import "base/variables";
+@import "base/mixins";
+/* @import "base/sprite"; */
+/* @import "../fonts/googlecss/_fonts.scss"; */
+
+/* layout */
+@import "layout/general";
+@import "layout/header";
