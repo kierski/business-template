@@ -1,3 +1,4 @@
+
 // require modules
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
@@ -159,7 +160,7 @@ gulp.task('img', function() {
 // upload to ftp
 gulp.task('upload', function() {
     var conn = ftp.create({
-        host: 's8.mydevil.net',
+        host: '****',
         user: '****',
         password: '****'
     });
