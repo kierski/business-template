@@ -31,7 +31,7 @@ gulp.task('sprite', function() {
             padding: 10
         }));
     spriteData.img.pipe(gulp.dest('src/images'));
-    spriteData.css.pipe(gulp.dest('src/scss/base'));
+    spriteData.css.pipe(gulp.dest('src/style/base'));
 });
 
 // html
@@ -45,7 +45,7 @@ gulp.task('html', function() {
 
 // styles
 gulp.task('style', function() {
-    return gulp.src('src/scss/main.scss')
+    return gulp.src('src/style/main.scss')
         .pipe(plumber())
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
@@ -60,15 +60,15 @@ gulp.task('style', function() {
 
 // fonts
 var options = {
-    fontsDir: 'googlefonts/',
-    cssDir: 'googlecss/',
+    fontsDir: 'files/',
+    cssDir: 'css/',
     cssFilename: '_fonts.scss'
 };
 
 gulp.task('fonts', function() {
     return gulp.src('./fonts.list')
         .pipe(googleWebFonts(options))
-        .pipe(gulp.dest('src/fonts'));
+        .pipe(gulp.dest('src/style/fonts'));
 });
 
 // scripts
@@ -108,20 +108,20 @@ gulp.task('css-bower', function() {
             prefix: "_",
             extname: ".scss"
         }))
-        .pipe(gulp.dest('src/scss/bower'))
+        .pipe(gulp.dest('src/style/bower'))
         .pipe(css.restore);
 });
 
 // bower bootstrap
 gulp.task('bootstrap-bower', function() {
-    const scss = filter('bootstrap/scss/**/*.scss', {
+    const scss = filter('bootstrap/style/**/*.scss', {
         restore: true
     });
     return bower({
             directory: './bower_components'
         })
         .pipe(scss)
-        .pipe(gulp.dest('src/scss'))
+        .pipe(gulp.dest('src/style'))
         .pipe(scss.restore);
 });
 
@@ -174,7 +174,7 @@ gulp.task('build', function(cb) {
 
 // gulp watch
 gulp.task('watch', function() {
-    gulp.watch('src/scss/**/*.scss', ['style']);
+    gulp.watch('src/style/**/*.scss', ['style']);
     gulp.watch(['src/js/modules/*.js', 'src/js/main.js', 'src/*.html'], ['scripts']).on('change', browserSync.reload);
 });
 
