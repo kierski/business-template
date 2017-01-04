@@ -62,7 +62,7 @@ gulp.task('style', function() {
 var options = {
     fontsDir: 'googlefonts/',
     cssDir: 'googlecss/',
-    cssFilename: '_fonts.scs'
+    cssFilename: '_fonts.scss'
 };
 
 gulp.task('fonts', function() {
