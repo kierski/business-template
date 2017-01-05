@@ -114,7 +114,7 @@ gulp.task('css-bower', function() {
 
 // bower bootstrap
 gulp.task('bootstrap-bower', function() {
-    const scss = filter('bootstrap/style/**/*.scss', {
+    const scss = filter('bootstrap/scss/**/*.scss', {
         restore: true
     });
     return bower({
