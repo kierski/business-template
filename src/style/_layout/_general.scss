@@ -1,0 +1,14 @@
+
+body {
+  background-color: gray;
+}
+
+/* owl carousel animation */
+.animated {
+    visibility:hidden;
+    animation-delay: .5s;
+}
+
+.owl-item.animated {
+    visibility: visible;
+}

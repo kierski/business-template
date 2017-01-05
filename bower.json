@@ -9,6 +9,7 @@
   "homepage": "kier.ski",
   "dependencies": {
     "owl.carousel": "^2.2.0",
-    "bootstrap": "v4.0.0-alpha.5"
+    "bootstrap": "v4.0.0-alpha.5",
+    "animate.css": "^3.5.2"
   }
 }
