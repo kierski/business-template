@@ -1,0 +1,66 @@
+
+.navigation {
+  position: fixed;
+  top: 5em;
+  z-index: 5;
+  width: 100%;
+  background-color: transparent;
+  transition: 0.5s;
+  &.scroll {
+    top: 0;
+    background-color: $accentGoldColor;
+    padding: 2em;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+  &__logo {
+    color: $lightFontColor;
+    h1 {
+      font-size: 3em;
+    }
+  }
+  &__nav {
+    float: right;
+    text-transform: uppercase;
+    li {
+      position: relative;
+      a {
+        color: $lightFontColor;
+        font-size: 1.4em;
+        line-height: 2.5em;
+      }
+      &::after, &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        height: 1px;
+        background-color: $lightFontColor;
+        bottom: -.5em;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      &::after {
+        width: 50%;
+        left: -10px;
+      }
+      &::before {
+        background-color: $accentGoldColor;
+        width: 50%;
+        right: -10px;
+      }
+      &:hover {
+        &::after, &::before {
+          opacity: 1;
+        }
+        &::after {
+          left: 0;
+        }
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+}

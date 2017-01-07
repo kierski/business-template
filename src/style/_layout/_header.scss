@@ -1,0 +1,42 @@
+
+.header {
+  background-image: url('../images/header_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  @include overlay($overlayBgColor, 0.6);
+  &__title {
+    z-index: 2;
+    position: absolute;
+    top: calc(50vh);
+    transform: translateY(-50%);
+    h2, p {
+      color: $lightFontColor;
+      letter-spacing: 0.05em;
+      line-height: 1.5em;
+    }
+    p {
+      padding-top: 1.5em;
+      text-align: justify;
+      text-align-last: center;
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+  }
+  &__btn {
+    @extend %btn;
+    border-color: $lightFontColor;
+    padding: .7em 3em;
+    color: $lightFontColor;
+    margin-top: 2em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    &::before {
+      background-color: $accentGoldColor;
+    }
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
