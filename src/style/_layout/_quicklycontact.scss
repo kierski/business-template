@@ -1,0 +1,46 @@
+
+.quicklycontact {
+  background-image: url('../images/quickly-contact_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 45em;
+  position: relative;
+  @include overlay($overlayBgColor, 0.6);
+  .heading  {
+    padding-bottom: 4em;
+    &--quicklycontact {
+      h3 {
+        color: $lightFontColor;
+      }
+    }
+  }
+  &__form {
+    position: relative;
+    border: 1px solid $lightFontColor;
+    padding: 5em;
+    &--inputs {
+      input {
+        background: transparent;
+        border: 1px solid $lightFontColor;
+        border-radius: 0;
+        @include placeholderColor($lightFontColor);
+        transition: 0.5s;
+        &:focus {
+          color: $lightFontColor;
+          background-color: transparent;
+          border: 1px solid $accentGoldColor;
+        }
+      }
+    }
+    &--btn {
+      @extend %btn;
+      margin-left: 5em;
+      border-color: $lightFontColor;
+      padding: .5em 3em;
+      color: $lightFontColor;
+      &::before {
+        background-color: $accentGoldColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.ourservices {
+  &__slider {
+    &__item {
+      border: 1px solid $darkFontColor;
+      height: 35em;
+      &--ico {
+        display: inline-block;
+        text-align: center;
+        background-image: url(../images/sprite.png);
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30%;
+        &-1 {
+          background-position: $s-1-offset-y $s-1-offset-x;
+          width: $s-1-width;
+          height: $s-1-height;
+        }
+        &-2 {
+          background-position: $s-1-offset-y $s-1-offset-x;
+          width: $s-1-width;
+          height: $s-1-height;
+        }
+        &-3 {
+          background-position: $s-1-offset-x $s-1-offset-y;
+          width: $s-1-width;
+          height: $s-1-height;
+        }
+        &-4 {
+          background-position: $s-1-offset-y $s-1-offset-x;
+          width: $s-1-width;
+          height: $s-1-height;
+        }
+      }
+      h5 {
+        margin-top: 8%;
+        text-align: center;
+      }
+    }
+  }
+
+  .owl {
+    &-stage-outer {
+
+    }
+    &-nav {
+      position: absolute;
+      width: 100%;
+      top: -40%;
+    }
+
+    &-next,
+    &-prev {
+      color: transparent;
+      display: block;
+      border: 1px solid $darkFontColor;
+      padding: 1.2em;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: $accentGoldColor;
+        border-color: transparent;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $darkFontColor;
+        height: 2px;
+        width: 40%;
+      }
+    }
+
+    &-prev {
+      position: absolute;
+      left: -8em;
+      top: 28em;
+      &::before, &::after {
+        left: 30%;
+      }
+      &::before {
+        transform: rotate(-45deg) translateX(-.3em);
+      }
+      &::after {
+        transform: rotate(45deg) translateX(-.3em);
+      }
+    }
+
+    &-next {
+      position: absolute;
+      right: -8em;
+      top: 28em;
+      &::before, &::after {
+        right: 30%;
+      }
+      &::before {
+        transform: rotate(45deg) translateX(.3em);
+      }
+      &::after {
+        transform: rotate(-45deg) translateX(.3em);
+      }
+    }
+  }
+}

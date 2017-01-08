@@ -5,22 +5,13 @@ body {
   font-weight: 400;
 }
 
-/* owl carousel animation */
-.animated {
-    visibility:hidden;
-    animation-delay: .5s;
-}
-
-.owl-item.animated {
-    visibility: visible;
-}
-
 /* button */
 %btn {
   background: transparent;
   border-radius: 0;
   position: relative;
   overflow: hidden;
+  transform: translateX(-50%);
   transition: all 600ms $cbBtn;
   &::before {
     content: "";
@@ -35,9 +26,40 @@ body {
     transition: all 600ms $cbBtn;
   }
   &:hover {
+    border-color: transparent;
     color: $darkFontColor;
     &::before {
       transform: translateX(0);
     }
+  }
+}
+
+/* heading */
+.heading {
+  padding-top: 8em;
+  padding-bottom: 8em;
+  h3 {
+    font-size: 3em;
+    color: $darkFontColor;
+    position: relative;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 10%;
+      height: 2px;
+      background-color: $accentGoldColor;
+      position: absolute;
+      bottom: -.7em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  p {
+    text-align: justify;
+    text-align-last: center;
+    font-size: 1.5em;
+    font-weight: 300;
   }
 }

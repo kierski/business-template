@@ -14,6 +14,22 @@
   }
 }
 
+/* placeholder color */
+@mixin placeholderColor($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-input-placeholder {
+    color: $color;
+  }
+  &::-moz-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
 /* clearfix */
 @mixin clearfix {
   &:after {

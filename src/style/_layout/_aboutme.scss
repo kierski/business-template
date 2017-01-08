@@ -1,0 +1,29 @@
+
+.aboutme {
+  margin-bottom: 6em;
+  &__moreinfo {
+    &--photo {
+      background-image: url('../images/person.jpg');
+      background-size: cover;
+      background-position: center;
+      max-width: 100%;
+      height: 59em;
+      position: relative;
+      @include overlay($overlayBgColor, 0.6);
+    }
+    &--txt {
+      margin-top: 50%;
+      transform: translateY(-50%);
+      h4 {
+        font-size: 4.7em;
+        font-weight: 300;
+        padding-bottom: .5em;
+      }
+      p {
+        font-size: 1.7em;
+        font-weight: 300;
+        line-height: 1.5em;
+      }
+    }
+  }
+}

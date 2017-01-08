@@ -31,12 +31,8 @@
     color: $lightFontColor;
     margin-top: 2em;
     margin-left: 50%;
-    transform: translateX(-50%);
     &::before {
       background-color: $accentGoldColor;
-    }
-    &:hover {
-      border-color: transparent;
     }
   }
 }

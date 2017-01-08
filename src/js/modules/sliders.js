@@ -3,6 +3,8 @@ $('.ourservices__slider').owlCarousel({
 	dots: false,
 	loop: true,
 	nav: true,
+  center: true,
+  margin: 15,
 	responsive: {
 		0: {
 			items: 1

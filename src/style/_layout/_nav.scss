@@ -25,6 +25,7 @@
     float: right;
     text-transform: uppercase;
     li {
+      cursor: pointer;
       position: relative;
       a {
         color: $lightFontColor;

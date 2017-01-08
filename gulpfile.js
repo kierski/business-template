@@ -28,10 +28,10 @@ gulp.task('sprite', function() {
             imgName: 'sprite.png',
             cssName: '_sprite.scss',
             algorithm: 'binary-tree',
-            padding: 10
+            padding: 0
         }));
     spriteData.img.pipe(gulp.dest('src/images'));
-    spriteData.css.pipe(gulp.dest('src/style/base'));
+    spriteData.css.pipe(gulp.dest('src/style/_base'));
 });
 
 // html
