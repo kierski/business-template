@@ -1,0 +1,23 @@
+
+.contactlink {
+  background-color: $overlayBgColor;
+  width: 100%;
+  height: 20em;
+  margin-top: 10em;
+  position: relative;
+  &--btn {
+    @extend %btn;
+    position: relative;
+    border-color: $accentGoldColor;
+    padding: 1em 7em;
+    color: $lightFontColor;
+    left: 50%;
+    top: 37%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    &::before {
+      background-color: $accentGoldColor;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+
+
+.ourclients {
+  @include overlay($overlayBgColor, 0.6);
+  margin-top: 10em;
+  height: 50em;
+  position: relative;
+  background-image: url(../images/clients_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .heading {
+    &--ourclients {
+      h3 {
+        color: $lightFontColor;
+      }
+    }
+  }
+}

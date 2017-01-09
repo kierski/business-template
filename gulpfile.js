@@ -52,7 +52,7 @@ gulp.task('style', function() {
         }))
         .pipe(sourcemaps.init())
         .pipe(scss.sync())
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        // .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('src/css'))
         .pipe(browserSync.stream());

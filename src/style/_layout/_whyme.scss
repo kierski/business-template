@@ -1,0 +1,53 @@
+
+.whyme {
+  margin-top: 2em;
+  &__feature {
+    border: 1px solid $accentGoldColor;
+    text-align: center;
+    padding: 4.5em;
+    position: relative;
+    &--icon {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -3.5em;
+      width: 65px;
+      height: 65px;
+      border-radius: 100%;
+      background-color: $accentGoldColor;
+      &-1, &-2, &-3 {
+        display: inline-block;
+        position: absolute;
+        background-image: url('../images/sprite.png');
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      &-1 {
+        background-position: $f-1-offset-x $f-1-offset-y;
+        width: $f-1-width;
+        height: $f-1-height;
+      }
+      &-2 {
+        background-position: $f-2-offset-x $f-2-offset-y;
+        width: $f-2-width;
+        height: $f-2-height;
+      }
+      &-3 {
+        background-position: $f-3-offset-x $f-3-offset-y;
+        width: $f-3-width;
+        height: $f-3-height;
+      }
+    }
+    h5 {
+      font-size: 2.5em;
+      padding-top: .3em;
+      padding-bottom: .1em;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+  }
+}
