@@ -1,12 +1,13 @@
 
-# PB theme
-_fun with PSD to code_.
+# business template
+_fun with my PSD to code_.
 
----
 **start**
-* ` bower install `
 
-* ` npm install `
----
+```javascript
+bower install
+npm instal
+gulp watch
+```
 
 ![img](screen.jpg)
